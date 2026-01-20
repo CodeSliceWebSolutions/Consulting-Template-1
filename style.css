@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #0fa958;
+    color: #fff;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(15,169,88,0.85),
+            rgba(43,177,255,0.85)
+        ),
+        url("assets/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+
+
+
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+}
+
+.hero p {
+    margin: 15px 0 30px;
+    font-size: 1.2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn.primary {
+    background: #fff;
+    color: #0fa958;
+}
+
+.btn.primary:hover {
+    transform: scale(1.05);
+}
+
+.btn.outline {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn.outline:hover {
+    background: #fff;
+    color: #0fa958;
+}
+
+.large {
+    font-size: 1.1rem;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 10%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.3rem;
+}
+
+/* GLASS EFFECT */
+.glass {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+/* MISTAKES */
+.mistake-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    padding: 30px;
+    position: relative;
+}
+
+.card span {
+    font-size: 2rem;
+    opacity: 0.4;
+}
+
+/* WHY */
+.why {
+    background: #0d8f4c;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.why-card {
+    padding: 25px;
+    background: #fff;
+    color: #0fa958;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(120deg, #2bb1ff, #0fa958);
+    text-align: center;
+}
+
+/* CONTACT */
+.contact-box {
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #0c7d44;
+}
+
+/* ANIMATIONS */
+.fade-in {
+    animation: fade 1.5s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 1.5s ease forwards;
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* SERVICES SECTION */
+.services {
+    background: linear-gradient(120deg, #0fa958, #2bb1ff);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    padding: 35px;
+    border-radius: 25px;
+    transition: 0.4s ease;
+    position: relative;
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.service-card ul {
+    list-style: none;
+}
+
+.service-card li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 18px;
+}
+
+.service-card li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #fff;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+.nav-cta {
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: #0fa958;
+}
+
+/* HERO LOGO */
+.hero-logo {
+    width: 280px;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.visual-break img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;   /* 🔑 KEY CHANGE */
+    display: block;
+    border-radius: 25px;
+}
+
+
+.hero h1,
+.hero p {
+    text-shadow: 0 4px 20px rgba(0,0,0,0.35);
+}
+
+/* FLOATING LOGO — STRONG WHITE GLOW */
+.floating-logo {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 999;
+}
+
+.floating-logo img {
+    height: 200px;
+    width: auto;
+    display: block;
+
+    /* 🔥 Bright white glow */
+    filter:
+        drop-shadow(0 0 6px rgba(255,255,255,0.9))
+        drop-shadow(0 0 12px rgba(255,255,255,0.7))
+        drop-shadow(0 0 20px rgba(255,255,255,0.5));
+}
+
+@media (max-width: 768px) {
+    .floating-logo {
+        top: 12px;
+        left: 12px;
+    }
+
+    .floating-logo img {
+        height: 90px;
+    }
+}
+
+
+
+
+
